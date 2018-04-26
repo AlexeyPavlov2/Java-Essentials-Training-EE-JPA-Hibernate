@@ -5,6 +5,8 @@
 - Adding data in tables
 - Searching data using NativeQuery
 
+Creatу database "projects" before you run app.
+
 <h6>Screenshots:</h6>
 
  
