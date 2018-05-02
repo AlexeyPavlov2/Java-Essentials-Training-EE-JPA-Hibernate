@@ -1,4 +1,4 @@
-#Simple Hibernate console application
+# Simple Hibernate console application
 
 - Configure Hibernate without hibernate.cfg.xml
 - Searching data using HQL
