@@ -1,4 +1,4 @@
-Hibernate, MySQL, Java Servlet, JSON and jQuery. AJAX request and response example.
+# Hibernate, MySQL, Java Servlet, JSON and jQuery. AJAX request and response example.
 
 In this example i cover the following topics:
 - Capture form data and send that to the Server using jQuery AJAX request
