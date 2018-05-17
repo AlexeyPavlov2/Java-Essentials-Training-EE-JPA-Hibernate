@@ -1,0 +1,75 @@
+-- phpMyAdmin SQL Dump
+-- version 4.6.5.2
+-- https://www.phpmyadmin.net/
+--
+-- Хост: 127.0.0.1:3306
+-- Время создания: Май 17 2018 г., 18:48
+-- Версия сервера: 5.7.16
+-- Версия PHP: 5.6.29
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- База данных: `world`
+--
+CREATE DATABASE IF NOT EXISTS `world` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `world`;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `country`
+--
+
+DROP TABLE IF EXISTS `country`;
+CREATE TABLE `country` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `capital` varchar(50) DEFAULT NULL,
+  `code` varchar(50) DEFAULT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `area` bigint(20) UNSIGNED DEFAULT NULL,
+  `population` bigint(20) UNSIGNED DEFAULT NULL,
+  `lexpect` decimal(6,2) UNSIGNED DEFAULT NULL,
+  `gdp` bigint(20) UNSIGNED DEFAULT NULL,
+  `flag` tinyblob
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `country`
+--
+
+INSERT INTO `country` (`id`, `capital`, `code`, `name`, `area`, `population`, `lexpect`, `gdp`, `flag`) VALUES
+(1, 'Moscow', 'ru', 'Russia', 17098246, 144526636, '71.50', 4152000000, 0x89504e470d0a1a0a0000000d494844520000007d000000530403000000400815500000000467414d410000b18f0bfc6105000000206348524d00007a26000080840000fa00000080e800007530),
+(2, 'Washington', 'us', 'USA', 3796742, 325719178, '79.30', 19390000000, 0x89504e470d0a1a0a0000000d494844520000007d0000004208030000004d72296f0000000467414d410000b18f0bfc6105000000206348524d00007a26000080840000fa00000080e8000075300000ea6000003a98000017709cba513c0000018f504c54),
+(3, 'Tokyo', 'jp', 'Japan', 377972, 126672000, '83.70', 5619000000, 0x89504e470d0a1a0a0000000d494844520000007d00000053080300000085f8f8510000000467414d410000b18f0bfc6105000000206348524d00007a26000080840000fa00000080e8000075300000ea6000003a98000017709cba513c00000138504c5445fffffffbf1f3f1cbd4ebb2c0e8a7b7e499abf9e7ebe49aacd35976c31c44bc002dd45a77e59badf9e8ecfefdfdeaaebccf4969bd032fbd0430cf4a6aeaafbdfffefec72a50c72b50e8a9b8f4d6ddcd4062cd4263f5d8dfe6a1b2bf0a35be0834e290a4fefafbd55f7bd6627efefbfcfcf5f7d04b6bce4465),
+(4, 'Bern', 'ch', 'Switzerland', 41285, 8401120, '83.40', 517000000, 0x89504e470d0a1a0a0000000d49);
+
+--
+-- Индексы сохранённых таблиц
+--
+
+--
+-- Индексы таблицы `country`
+--
+ALTER TABLE `country`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT для сохранённых таблиц
+--
+
+--
+-- AUTO_INCREMENT для таблицы `country`
+--
+ALTER TABLE `country`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

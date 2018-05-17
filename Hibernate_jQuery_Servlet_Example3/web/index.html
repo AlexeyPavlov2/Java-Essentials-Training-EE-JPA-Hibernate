@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jQuery Servlet Hibernate Example</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="shortcut icon" href="">
+
+        <script src="js/app.js"></script>                    
+    </head>
+    <body>
+        <h3>jQuery Servlet Hibernate Example</h3>
+
+        <div id="main_container_div" class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">  
+                    <div class="panel panel-default">
+                        <div class="panel-heading">jQuery Ajax Form data Submit Request</div>
+                        <div class="panel-body">
+                            <form id="myAjaxRequestForm">
+                                <div class="form-group">
+                                    <label for="countryCode">Country Code:</label>
+                                    <input type="text" class="form-control" id="countryCode" placeholder="Country Code">
+                                </div>
+                                <input id="myButton" type="submit" class="btn btn-primary" value="Search"/>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2"></div>
+            </div>  <!-- row   form --> 
+
+            <div id="normalResponse">
+                <div class="row" id="response">
+                    <div class="col-lg-3">  
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">Response from jQuery Ajax Request. Getting JSON from servlet.</div>
+                            <div class="panel-body">
+                                <h4 id="normalMsg"></h4>
+                                <table class="table table-hover">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Name:
+                                            </td>
+                                            <td>
+                                                <label id="name">nnaammee</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Capital:
+                                            </td>
+                                            <td>
+                                                <label id="capital">ccaappiittaall</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Code:
+                                            </td>
+                                            <td>
+                                                <label id="code">ccooddee</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Area (&#160;km<sup>2</sup>):
+                                            </td>
+                                            <td>
+                                                <label id="area">aarreeaa</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Population:
+                                            </td>
+                                            <td>
+                                                <label id="population">popul</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Life expectancy:
+                                            </td>
+                                            <td>
+                                                <label id="lexpect">life</label>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                GDP, $:
+                                            </td>
+                                            <td>
+                                                <label id="gdp">gdp</label>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>  <!-- normalResponse  -->    
+
+            <div id="errorResponse">
+                <div class="row" >
+                    <div class="col-lg-3">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">Response from jQuery/Servlet - Error</div>
+                            <div class="panel-body">
+                                <h4 id="errorMsg">Error Mess</h4>
+                            </div>
+                        </div>
+                    </div>    
+                </div> 
+            </div>  <!--  error  -->
+
+
+
+        </div> <!--  main_container_div  -->
+    </body>
+</html>
